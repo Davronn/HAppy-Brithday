@@ -10,37 +10,27 @@
             margin: 0;
             padding: 0;
             height: 100%;
-        }
-
-        /* Video uchun konteyner */
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden; /* Videoning chiqib ketishini oldini olish */
+            background-color: black; /* Fonni qora qilish */
+            display: flex;
+            justify-content: center; /* Video markazlashtiriladi */
+            align-items: center; /* Video markazlashtiriladi */
         }
 
         /* Video uchun CSS */
         video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            object-fit: cover; /* Video ekran bo'ylab to'liq joylashadi */
+            max-width: 100%;  /* Video kengligi ekran o'lchamiga mos bo'ladi */
+            max-height: 100vh; /* Video balandligi ekran o'lchamiga mos bo'ladi */
+            object-fit: contain; /* Videoning tabiiy o'lchamida bo'lishi uchun */
         }
     </style>
 </head>
 <body>
 
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="./video/146578-789534197.mp4" type="video/mp4">
-            <!-- Agar video qo'llaniladigan format bo'lmasa, shunday matn ko'rsatiladi -->
-            Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
-        </video>
-    </div>
+    <video autoplay muted loop>
+        <source src="./video/146578-789534197.mp4" type="video/mp4">
+        <!-- Agar video qo'llaniladigan format bo'lmasa, shunday matn ko'rsatiladi -->
+        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+    </video>
 
 </body>
 </html>
