@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Sahifa</title>
+    <style>
+        /* Body va html elementlarini to'liq ekranga kengaytirish */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Video uchun konteyner */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* Videoning chiqib ketishini oldini olish */
+        }
+
+        /* Video uchun CSS */
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover; /* Video ekran bo'ylab to'liq joylashadi */
+        }
+    </style>
 </head>
 <body>
-    <h1>Happy Brithday</h1>
+
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="./video/146578-789534197.mp4" type="video/mp4">
+            <!-- Agar video qo'llaniladigan format bo'lmasa, shunday matn ko'rsatiladi -->
+            Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+        </video>
+    </div>
+
 </body>
 </html>
